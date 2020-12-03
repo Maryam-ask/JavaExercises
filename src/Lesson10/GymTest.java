@@ -12,9 +12,8 @@ import java.util.List;
  */
 public class GymTest {
     public static void main(String[] args) throws IOException {
-        File file = new File("D:\\Java_Home(training)\\File\\Customers.txt");
         Gym gym = new Gym();
-        List<Person> f = gym.readFile(file);
+        List<Person> f = gym.readFile();
         for (Person a : f) {
             System.out.println(a.getFullName());
             System.out.println(a.getIdNumber());

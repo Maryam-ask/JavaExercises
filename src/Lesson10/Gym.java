@@ -1,6 +1,7 @@
 package Lesson10;
 
 import java.io.*;
+import java.security.PrivateKey;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +13,10 @@ import java.util.List;
  * Project: IntelliJ IDEA
  */
 public class Gym {
-
-    public static List readFile(File file) throws IOException {
-        FileInputStream fileInputStream = new FileInputStream(file);
+    private static final String directoryPath = "D:\\Java_Home(training)\\File\\";
+    private static final String customerFilePath = "D:\\Java_Home(training)\\File\\Customers.txt";
+    public static List readFile() throws IOException {
+        FileInputStream fileInputStream = new FileInputStream(customerFilePath);
         InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         List<Person> filereader = new ArrayList<>();
@@ -61,6 +63,20 @@ public class Gym {
             counter = 366;
         }
         return counter<=365;
+    }
+    public static File creatFile(Person person){
+        File file = new File(directoryPath+person.getFullName()+".txt");
+            if (file.exists()) {
+                System.out.println("File Exists.");
+            } else {
+                try {
+                    file.createNewFile();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        return file;
     }
 
 }

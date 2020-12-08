@@ -1,7 +1,6 @@
 package Lesson10;
 
 import java.io.*;
-import java.security.PrivateKey;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,13 +14,15 @@ import java.util.List;
 public class Gym {
     private static final String directoryPath = "D:\\Java_Home(training)\\File\\";
     private static final String customerFilePath = "D:\\Java_Home(training)\\File\\Customers.txt";
-    public static List readFile() throws IOException {
-        FileInputStream fileInputStream = new FileInputStream(customerFilePath);
-        InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-        List<Person> filereader = new ArrayList<>();
-        String reader;
+
+    public List readFile() {
         try {
+            FileInputStream fileInputStream = new FileInputStream(customerFilePath);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            List<Person> filereader = new ArrayList<>();
+            String reader;
+
             while ((reader = bufferedReader.readLine()) != null) {
 
                 Person person = new Person();
@@ -34,21 +35,34 @@ public class Gym {
                 LocalDate localDate = LocalDate.parse(reader);
                 person.setDate(localDate);
             }
+
+            bufferedReader.close();
+            inputStreamReader.close();
+            fileInputStream.close();
+
+            return filereader;
         } catch (FileNotFoundException e) {
-            System.out.println("Error: File not found!");
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        bufferedReader.close();
-        inputStreamReader.close();
-        fileInputStream.close();
-        return filereader;
+        return null;
+
     }
 
-    public static boolean checkName(String name) {
-        Person person = new Person();
-        return name.equals(person.getFullName());
+    public Person checkName(String name, List<Person> pList) {
+        Person pResult = null;
+
+        for (Person p : pList) {
+            if (name.equals(p.getFullName().trim())) {
+                pResult = p;
+                break;
+            }
+        }
+        return pResult;
     }
 
-    public static boolean checkDate(Person person) {
+    public boolean checkDate(Person person) {
         LocalDate now = LocalDate.now();
 
         int personDateDays = person.getDate().getDayOfYear();
@@ -58,25 +72,57 @@ public class Gym {
         if (person.getDate().getYear() == now.getYear()) {
             counter = nowDays - personDateDays;
         } else if (person.getDate().getMonthValue() >= now.getMonthValue() && (now.getYear() - person.getDate().getYear() == 1)) {
-            counter = nowDays + (365-personDateDays);
-        }else {
+            counter = nowDays + (365 - personDateDays);
+        } else {
             counter = 366;
         }
-        return counter<=365;
+        return counter <= 365;
     }
-    public static File creatFile(Person person){
-        File file = new File(directoryPath+person.getFullName()+".txt");
+
+
+    public File creatFile(Person person, String plan) {
+
+        try {
+            File file = new File(directoryPath + person.getFullName() + ".txt");
             if (file.exists()) {
-                System.out.println("File Exists.");
+                String readf;
+                FileWriter fw = new FileWriter(directoryPath + person.getFullName() + ".txt", true);
+                fw.write("\n" + LocalDate.now().toString() + "\n" + plan);
+                fw.close();
             } else {
-                try {
-                    file.createNewFile();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+
+                file.createNewFile();
+                FileOutputStream fileOutputStream = new FileOutputStream(file);
+                fileOutputStream.write(LocalDate.now().toString().getBytes());
+                fileOutputStream.write("\n".getBytes());
+                fileOutputStream.write(plan.getBytes());
+                fileOutputStream.close();
             }
 
-        return file;
+            return file;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
+    public File creatReceptionFile(Person person) {
+        try {
+            File file = new File(directoryPath + "Reception.txt");
+            if (file.exists()) {
+                FileWriter fileWriter = new FileWriter(directoryPath + "Reception.txt", true);
+                fileWriter.write("\n" + person.getFullName() + "\n" + LocalDate.now().toString());
+                fileWriter.close();
+            } else {
+                file.createNewFile();
+                FileWriter fileWriter = new FileWriter(directoryPath + "Reception.txt", true);
+                fileWriter.write(person.getFullName() + "\n" + LocalDate.now().toString());
+                fileWriter.close();
+            }
+            return file;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

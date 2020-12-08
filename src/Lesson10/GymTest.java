@@ -1,8 +1,8 @@
 package Lesson10;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Created by Maryam Askari
@@ -13,11 +13,25 @@ import java.util.List;
 public class GymTest {
     public static void main(String[] args) throws IOException {
         Gym gym = new Gym();
+        Scanner input = new Scanner(System.in);
         List<Person> f = gym.readFile();
-        for (Person a : f) {
-            System.out.println(a.getFullName());
-            System.out.println(a.getIdNumber());
-            System.out.println(a.getDate());
+        System.out.println("Enter your name:");
+        String scInput = input.nextLine();
+        Person p = gym.checkName(scInput, f);
+        if (p != null) {
+            System.out.println("?????????");
+            if (gym.checkDate(p)) {
+                System.out.println("you are welcome!");
+                System.out.println("What is your plan?");
+                String plan = input.nextLine();
+                gym.creatFile(p, plan);
+                gym.creatReceptionFile(p);
+            } else {
+                System.out.println("Person is not allowed to enter the gym.");
+            }
+
+        } else {
+            System.out.println("Person is not in the list!");
         }
     }
 }

@@ -7,5 +7,4 @@ package JavaExercises.exercise1a;
  * Project: IntelliJ IDEA
  */
 public class CarOwner extends Person{
-
 }

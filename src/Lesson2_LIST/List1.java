@@ -1,8 +1,7 @@
-package Lesson2;
+package Lesson2_LIST;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created by Maryam Askari

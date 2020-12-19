@@ -1,6 +1,4 @@
-package Lesson4;
-
-import java.lang.reflect.Array;
+package Lesson4_inheritance;
 
 /**
  * Created by Maryam Askari

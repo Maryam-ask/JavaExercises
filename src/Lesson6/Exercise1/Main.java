@@ -1,7 +1,5 @@
 package Lesson6.Exercise1;
 
-import Lesson4.Child;
-
 import java.util.Scanner;
 
 /**

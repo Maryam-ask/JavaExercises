@@ -36,15 +36,19 @@ public class Triangle extends GeometricObject {
     }
 
     public boolean isTriangle() {
-        boolean result = false;
+        boolean result1 = false;
+        boolean result2 = false;
+        boolean result3 = false;
         if (getSide1()<(getSide3()+getSide2())){
-            result = true;
-        } if (getSide2()<(getSide1()+getSide3())){
-            result =true;
-        }if (getSide3()<(getSide1()+getSide2())) {
-            result = true;
+            result1 = true;
         }
-        return result;
+        if (getSide2()<(getSide1()+getSide3())){
+            result2 =true;
+        }
+        if (getSide3()<(getSide1()+getSide2())) {
+            result3 = true;
+        }
+        return result1 && result2 && result3;
     }
 
     public String getColor() {

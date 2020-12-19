@@ -1,6 +1,4 @@
-package Lesson4;
-
-import java.util.stream.IntStream;
+package Lesson4_inheritance;
 
 /**
  * Created by Maryam Askari

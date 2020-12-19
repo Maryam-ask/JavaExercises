@@ -1,4 +1,4 @@
-package Lesson4;
+package Lesson4_inheritance;
 
 /**
  * Created by Maryam Askari

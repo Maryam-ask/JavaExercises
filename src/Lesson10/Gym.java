@@ -41,9 +41,8 @@ public class Gym {
             fileInputStream.close();
 
             return filereader;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
         return null;

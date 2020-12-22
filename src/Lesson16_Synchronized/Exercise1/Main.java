@@ -1,15 +1,17 @@
-package Lesson15_THREAD.LessonB;
+package Lesson16_Synchronized.Exercise1;
+
+import Lesson15_THREAD.LessonB.ProcessThread;
 
 /**
  * Created by Maryam Askari
- * Date: 12/15/2020
- * Time: 2:13 PM
+ * Date: 12/21/2020
+ * Time: 12:33 PM
  * Project: IntelliJ IDEA
  */
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        ProcessThread processThread = new ProcessThread();
+        Lesson15_THREAD.LessonB.ProcessThread processThread = new ProcessThread();
 
         Thread thread1 = new Thread(processThread);
         thread1.start();

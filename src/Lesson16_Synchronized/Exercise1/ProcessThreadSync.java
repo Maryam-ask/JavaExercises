@@ -20,10 +20,10 @@ public class ProcessThreadSync implements Runnable {
         this.count = count;
     }
 
-    public synchronized void processSomthing(int i){
+    public void processSomthing(int i) {
         try {
-            Thread.sleep(i*1000);
-        } catch (InterruptedException e){
+            Thread.sleep(i * 1000);
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
@@ -31,16 +31,16 @@ public class ProcessThreadSync implements Runnable {
 
     @Override
     public void run() {
-        //synchronized (this) {
+        synchronized (this) {
+        //synchronized (count){
+        for (Integer i = 0; i < 5; i++) {
 
-            for (Integer i = 0; i < 5; i++) {
+            processSomthing(i);
+            System.out.println(i + "------>" + count);
+            count++;
 
-                processSomthing(i);
-                System.out.println(i + "------>" + count);
-                count++;
-
-            }
-       // }
+        }
+        }
         System.out.println(count);
         System.out.println("******************");
     }

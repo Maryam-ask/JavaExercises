@@ -1,9 +1,4 @@
-package Lesson12.Exercise2;
-
-import java.io.*;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
+package Lesson12.Exercise2_List;
 
 /**
  * Created by Maryam Askari

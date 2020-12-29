@@ -1,4 +1,4 @@
-package Lesson12.Exercise2B;
+package Lesson12.Exercise2B_HashMap;
 
 import java.io.*;
 import java.util.HashMap;
@@ -25,6 +25,7 @@ public class CountryFile {
                 fileReader.put(s[0], s[1].trim());
                 i++;
             }
+
             bufferedReader.close();
             inputStreamReader.close();
             fileInputStream.close();
@@ -33,8 +34,6 @@ public class CountryFile {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
-        }catch (ArrayIndexOutOfBoundsException e){
             e.printStackTrace();
         }
         return null;

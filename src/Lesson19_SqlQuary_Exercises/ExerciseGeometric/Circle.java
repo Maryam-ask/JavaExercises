@@ -1,4 +1,4 @@
-package Lesson19.ExerciseGeometric;
+package Lesson19_SqlQuary_Exercises.ExerciseGeometric;
 
 /**
  * Created by Maryam Askari
@@ -8,24 +8,25 @@ package Lesson19.ExerciseGeometric;
  */
 public class Circle extends GeometricObject { //?
 
-    private final double pi = Math.PI;
+
     private double r;
+    private UtilsC utilsC = new UtilsC();
 
     public Circle() {
     }
 
-    public Circle(double r) {
-        this.r=r;
+    public void setR(double r) {
+        this.r = r;
     }
 
     @Override
     public double perimeter() {
-        return 2 * r * pi;
+        return utilsC.perimeter(r);
     }
 
     @Override
     public double area() {
-        return Math.pow(r, 2) * pi;
+        return utilsC.area(r);
     }
 
     public double getR (){

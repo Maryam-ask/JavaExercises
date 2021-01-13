@@ -1,4 +1,4 @@
-package Lesson9;
+package Lesson9_Generic;
 
 /**
  * Created by Maryam Askari

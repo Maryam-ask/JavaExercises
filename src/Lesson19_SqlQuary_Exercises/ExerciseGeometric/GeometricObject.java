@@ -1,4 +1,4 @@
-package Lesson19.ExerciseGeometric;
+package Lesson19_SqlQuary_Exercises.ExerciseGeometric;
 
 /**
  * Created by Maryam Askari

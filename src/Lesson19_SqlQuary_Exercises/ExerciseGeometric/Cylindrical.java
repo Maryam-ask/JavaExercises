@@ -1,4 +1,4 @@
-package Lesson19.ExerciseGeometric;
+package Lesson19_SqlQuary_Exercises.ExerciseGeometric;
 
 /**
  * Created by Maryam Askari
@@ -6,7 +6,7 @@ package Lesson19.ExerciseGeometric;
  * Time: 9:12 PM
  * Project: IntelliJ IDEA
  */
-public class Cylindrical extends Circle implements Volume{
+public class Cylindrical extends GeometricObject implements Volume{
 
     private double h;
 
@@ -20,6 +20,11 @@ public class Cylindrical extends Circle implements Volume{
     @Override
     public double area(){
         return perimeter()*h;
+    }
+
+    @Override
+    public double perimeter() {
+        return 0;
     }
 
     @Override

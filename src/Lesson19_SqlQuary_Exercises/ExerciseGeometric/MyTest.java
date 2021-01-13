@@ -1,4 +1,4 @@
-package Lesson19.ExerciseGeometric;
+package Lesson19_SqlQuary_Exercises.ExerciseGeometric;
 
 /**
  * Created by Maryam Askari
@@ -11,7 +11,7 @@ public class MyTest {
     public static void main(String[] args) {
 
         // an Object of Circle
-        Circle circle = new Circle(3);
+        Circle circle = new Circle();
         System.out.println("Circle.area() : " + circle.area());
         System.out.println("Circle.perimeter() : " + circle.perimeter());
 

@@ -1,0 +1,6 @@
+Marahele ejraye ye Thread:
+1. new --> Thread baraye avalin bar eijad mishavad.
+2. Runnable --> Thread baraye ejra amade mishavad. vali hanooz ThreadScadul an ra baraye ejra entekhab nakarde ast.
+3. Running --> Thread ejra shode va dar marhaleye ejrast.
+4. Non-Running --> Thread dar hale entezar ast.
+5. Terminated --> Thread tamam shode va digar ejra nemishavad.

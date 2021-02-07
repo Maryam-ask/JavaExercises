@@ -1,0 +1,57 @@
+
+!!Ma DataBase haye mokhtalefi darim ke har kodam baraye yek kari khob ast
+
+Zamani ke hajme Data ziad ast va kar haye sangini darim hame be soraghe Oracle miravand.
+
+Yek noe paygahe-dade ast ke ma darone an etelat ra zakhire mikonim ke jadvali ast.
+
+Noe DataBase ha baham fargh darad gahi bazi az DataBase ha jadvali nistand va document zakhire mikonand.
+
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+
+Oracle 2 ghesmat darad ---> 1. Bakhshe Logical    & ----> 2. Bakhshe physical
+
+1. Logical do ghesmat darad -----> 1.SGA     &-----> 2.PGA
+
+1. SGA :: Baraye tarakoneshe etelat, etelat varede SGA mishavand. etelate kole
+1. SGA :: Beyne tamame karmandan moshtarak ast.
+1. SGA :: Data hara catch mikonad va har sanie yek bar khod ra update mikonad.
+1. SGA :: Etelat az Redo varede SGA mishavand.
+.................................
+1. PGA :: Etelatey ra ke mikhahim ra varede PGA mikonad. Sharayeti ke roye etelat migozarim.
+1. PGA :: Makhsose yek karmand hast, va har karmand PGA makhsose khod ra darad.
+....................................
+
+2. Layeye physical dar ghesmate hard-disk ask ke dar an 1.Data File va 2. Redo  3.Control File gharar darad.
+
+2. Data File ::  Dar Data File an etelaati ghara darand ke commit shode bashand.Yani daem baz nist va baraye yek khandan va neveshtan
+            daem baz o baste mishavand va dar natije sorate anha paien ast.
+2. Data File :: Zamani ke yek Query ra zakhire mikonim an miravad va darone Data File mineshinad.
+2. Data File :: Ma mitavin chandta Data File dashte bashim ama lozomi nadarad ke Data File ha kenare ham bashand.
+            Mitavanad dar jahaye mokhtalefe Systemamel bashad.
+2. Data File :: Tarakonesh ha bad az Commit shodan varede Data File mishavand.
+.....................................
+2. Redo :: Dar halike Redo ha hamishe baz hastan va sorat dar anha bala ast ke ma bad az Redo ha tarakonesh hara dar Data File mirizim.
+2. Redo :: Redo ha hajme sabeti darand. default an 150 MB ast.
+2. Redo :: Tarakonesh haie ke commit nashodeand dar Redo gharar migirand.
+.....................................
+
+!!! Zamani ke ye tarakonesh ra ejra minim bayad badesh an ra commit kard.
+Agar Query hara commit nakonim in query dar jadvale man vared nemishavad.
+
+!!! Az fazaye manteghi(Logical) be fazaye fyzyky(Physical) miravim.
+Zamani ke Query mizanim aval to Logical hastim va bad miravim be Physical.
+
+!!!! Zamani ke ye DataBase ra Run mikonim havaseman bashad ke aval Logicale an Run shode bashad.
+......................................
+
+Fild : Be name har sotone jadval migoyand.
+Data : Etelate har soton ra migoyand.
+
+........................................
+
+:::: Agar bekhahim az tarighe CMD be an vasl beshim ::::::
+sqlplus
+user name: ****
+pssword : ****

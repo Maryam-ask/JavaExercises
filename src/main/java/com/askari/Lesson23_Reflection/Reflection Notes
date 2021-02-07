@@ -1,0 +1,11 @@
+Reflection : Yani hamzaman ke dar hale Run shodan ast be an Class ezafe konim.
+Bayad bedanim ke koja bayad az reflection estefade kard.
+
+!! Agar bad moghe az an estefade konim baese kondie sistem mishavad
+   Zira Reflection darad compiler ra dor mizanad.
+
+
+!! Dar halate Reflection zamani ke mikhahim methodi ra invoke konim bayad hatman begoiem ke chandta vorodi darad
+   va jense vorodihaye an chist ---> zira momken ast yek method chand Overload dashte bashad.
+
+ !!!! Baraye gereftane Field dar halate Reflection farghi nadarad agar Field ha Private ya Public bashand.

@@ -1,0 +1,37 @@
+Ma format haye mokhtalefi darim : 1. Json    2.XML
+
+Dataie ke beine do nafar radobadal mishavad bayad ye formate khasi dashte bashad ta do taraf an ra beshenasand.
+
+*****************************************************************
+
+Formate Json:
+{
+"name":"Maryam",
+"age":12
+}
+
+*****************************************************************
+
+Formate XML:
+<sharif>
+  <student>
+    <name> marzieh </name>
+    <age>10</age>
+  </student>
+</sharif>
+
+*****************************************************************
+
+Library haye Json:
+1. Jackson
+2. Gson
+3. json-io
+4. Genson
+********************************************************'
+
+Json ---> Manande HashMap mimanad---> ye Key darad ba ye Value.
+
+***********************************
+
+Baraye neveshtane XML ---> niaz be jdom & jaxen darim
+

@@ -1,0 +1,38 @@
+
+MVC ---> Model View Controller.
+
+Controller ----> Model ra be view vasl mikonad.
+View ----> Anche ke karbar mibinad.
+model ---> anche ke barname nevis minevisad.
+
+***************************************************************************************************
+
+!!!!!Hamishe fielde ID ra dar NTT hayeman bayad dashte bashim.
+Va ID ra hamishe be onvane primary key darnazar migirim.
+
+***************************************************************************************************
+
+CRUD ---> Create Read Update Delete
+
+***************************************************************************************************
+
+Dar kelas haye NTT behtar ast ke 2 ta method ra override konim:
+---> 1. hashCode 2.toString 3.equals
+
+***************************************************************************************************'
+
+Dar model---> Student ra sakhtim
+Dar view ---> form haye UX ra misazim (FX).
+controller ---> nahveye vasl shodan az view be model.
+
+***************************************************************************************************
+
+Model khodesh be 3 ghesmat taghsim mishavad:
+1. TO: Transfer Object ---> Objecty ke gharare beine view va controller montaghel beshe
+2. BL: Business Logic ---> Manteghe barname va nahveye farakhanie anha.
+3. DA: Data Access ---> Chizi ke ma mostaghim roye Data kar mikonim.
+
+***************************************************************************************************
+
+Dar DA--> Method haie ra minevisam ke mikhahand be DataBase vasl shavand va Dataie ra bekhanand.
+Be in sorat mamolan minevisim (StudentDAO)---> DAO be akhare esme an Klass ya Object ezafe mikonim.

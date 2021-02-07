@@ -1,0 +1,54 @@
+
+Query haye jadid dar DataBase :
+
+1. Baraye neshan dadane sakhtare jadval ke che sotonhaie darad va noe har soton chi hast:
+     desc esmeTable;
+   ex: desc student;
+
+
+!!!.1. ye soton darim be name Null ----> be in man a ke agar sotoni ra
+             Nullable = yes konim --->  yani meghdare Null mitavanad begirad.
+             Nullable = no ----> meghdare Null nemitavanad begirad va hatman bayad ye chizi dar an berizim.
+            1.1 Baraye anke ye field Nullable nabashad:
+                 create table person(id number,name varchar2(20) NOT NULL,family varchar2(30));
+
+*******************************************************************************************************
+
+!!!.2. Fielde ID hamishe shenase ast.
+   2.1 ID ---> bayad hamishe primary key bashad.---> klide aslie jadval bashad
+   2.1.1 primary key ---> Null able nist bayad hatman meghdar dashte bashad
+                     ---> meghdare tekrari nemitavanad begirad.
+                     ---> Dar paygahe dade bayad hatman yeki az fieldha primary key bashad.
+   2.1.2. Baraye sakhtane Primary key:
+        create table person(id number,name varchar2(20),family varchar2(30), PRIMARY KEY (ID));
+   2.1 ID ---> Mamolan dar jadvale haye paygahe dade ma ye fielde ID darim ke mamolan Primary key mibashad.
+
+********************************************************************************************************
+
+3. A query for deleting:
+    delete from student where id=2;
+
+********************************************************************************************************
+
+!!! khataye Unique Constraint -----> yani ye fieldi dari to jadvalet ke unique va to dari dadeye tekrari be on midi.
+!!! Dar halate unique meghadare null ra ghabol mikonad.
+
+********************************************************************************************************
+
+ 4. Baraye anke yek soton Unique bashad: ----> yani meghdare tekrari nemitavanad begirad.
+       create table person(ID number, name varchar2 NOT NULL, family varchar2 UNIQUE, primary key (ID));
+
+********************************************************************************************************
+
+5. baraye insert kardan:
+   insert into person (ID, NAME) values (1,'dd');
+
+********************************************************************************************************
+ 7. Transaction ----> chand kar ra baham anjam dahad.
+ dar in execute haie ke ma dar JDBC minevisim auto commit ast va agar dar beine in amaliat bargh beravad va
+    amaliat nemitavanad kamel anjam shavad
+    va ma mikhahim kolein amaliat dar yek transaction anjam shavad.
+
+********************************************************************************************************
+
+!!!!! Dar intellij ---> query delete manande select ast.

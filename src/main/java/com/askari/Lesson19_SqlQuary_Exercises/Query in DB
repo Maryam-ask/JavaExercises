@@ -1,0 +1,62 @@
+
+    : Query OR Transaction :
+
+1. Schema : Be otaghak haye DataBase migoyand. Dakhele yek Schema mitavan n ta Table zakhire kard.
+2. Field : Be har sotoone Table.
+3. Record : Be har satre daroone Table migoyand.
+4. Data : Be har kodom az etelate khane haye daroone Table migoiand.
+*********************************************************
+     : 4 Amale asly ke mitavan ba Data ha anjam dad :
+
+1. Insert :(Write) Yek Data ra varede Table kard.
+2. Delete : Hazf kardane yek Data.
+3. Update : Update kardan ya taghir dadane yek Data ra mitanan ba an anjam dad.
+4. Select :(Read) Baraye khandane Data.
+
+*********************************************
+      :: (( Baraye Query neveshtan va kar ba Oracle SQL Developer )) ::
+
+Baraye sakhte user pass:
+create user johny identified by 12345;
+grant dba,connect to johny;
+
+1. Sakhte Schema :
+  1.1 create schema esme schema ;
+  1.2 + ---> connection
+
+2. roye schema rast klik karde ----> open sql worksheet ---> safheie ke mitavan dar an query nevesht baz mishavad.
+
+3. Sakhte Table :
+    creat table esmeTable (fieldhaie ke mikhahim);
+    ex: creat table student ( id number,name varchar2(30),family varchar2(50));
+!!! varchar ---> String. ----> Size varchar 250 character ast.
+!!! (30) ----> andazeye name ( che tedad horoof dashte bashad.)
+
+4. Baraye Run kardan : an khat ra entkhab karde va Run state ment ra mizanim ----> dokmeye |> (play)
+
+5. Baraye neveshtane dastore Commit:
+   commit;
+
+6. Baraye Insert kardan data :
+   insert into student (id,name,family) values (1,'Maryam','Askari);
+
+7. Baraye didane hameye fild haye yek jadval:
+   select * from nameTable;
+   ex: select * from student;
+
+8. Agar bekhahim faghat name hara neshan dahad :
+   select NAME from student;
+
+9. Baraye shart gozashtan:
+   select * from student where ID=2;
+
+10. Baraye uppdate kardan :
+   update student set family='Abbasi' where id=1;
+
+11. Baraye delete kardan :
+    delete from student where id=2;
+
+12. ROLLBAcK; ---> akharin dastor ra barmigardanad.
+
+13. Baraye hazf kardane yek jadval:
+    drop table student;

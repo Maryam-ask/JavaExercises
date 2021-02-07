@@ -1,0 +1,51 @@
+
+Cloud --> 3 model darad:
+1. cloud storage
+2. cloud process
+3. Green computing
+
+*********************************
+
+Green computing yek chizi shabihe claseringe ba in tafavot ke ke sistem ra mikonim 4 system
+
+Har kodom az in system ha yek kar ra mikonad.
+Masalan yeki + mikone yeki - va yeki * va yeki \
+Ke dar in halat ham baz yek LB (Loud balancer) darim ke in bar ra taghsim mikone
+Va zamanike ma darkhaste + darim miravad dar LB va bad LB az systeme + migirad
+
+**********************************
+
+in halat ha ---> halate Offline va Online darad
+
+********************'
+Corba ---> bayad zabane hardotaraf yeki bashe va bayad C ya az khanevadeye C mesle C++ bashad.
+
+!!! zabane C ---> RMI ra ghabool nemikonad.
+
+*************************************************
+
+web service : 1. Soap     2.Rest
+
+2. Rest  ---> web service haye saritari hastand va berooztarann va amniate balaie daran
+1. Soap  ---> web service ghadimitar va kondtare va niaz be Client daran.
+
+*******************************''
+
+RMI (Remote Method Invocation) ---> har do system bayad ye zaban dashte bashand.
+
+Server va Client ra khodemon minevisim va harkodam dar ye jaye digast ke ba Remote be ham dastresi darand.
+
+1. Server:
+1.1 Create Interface ---> bayad Extends Remote
+1.2 Creat a Class -----> Implement Interface
+                  -----> extends UnicastRemoteObject
+2. Client :
+2.1 Create Same Interface
+
+!!! Bayad beine Client va Server bayad ye tavafoghi bashad ----> Interface
+
+***************************************'
+
+Be interface haie ke hichi darone anha nist ---> Marker interface ya tak interface migoyand.
+
+

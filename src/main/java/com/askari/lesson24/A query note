@@ -1,0 +1,3 @@
+
+Yek Query baraye khandane ID be tartib:
+  select * from work order By ID;

@@ -1,0 +1,37 @@
+
+1. Baraye anke dar java betavanim class haie ra tarif konim ke dakhele classe digeie bashand: 4 modele tarif vojod darad.
+
+.................................
+
+2.Maziat haye Inner Class ha:
+2.1. niaz be neveshtane kode kamtari darad.
+2.2. zamani ke yek fildi ra private tarif konim---> faghad mitavan dakhele haman class az an estefade kard.
+Inner Class ha be filtere Private droone class dastresi darand.
+
+.....................................
+
+3. Inner Class ha ---> Manande hameye class haye digar bayad ba horoofe Bozorg shoro shavand.
+
+......................................
+
+4. Baraye dastresi be Inner class ha faghat mitavan az Outer Class be an dastresi peida kard.
+
+........................................
+
+5. Darone classe Inner nemitavan methode static nevesht. (Khataye compileTime)
+
+.........................................
+
+6. File class e Inner ra java be sorate ----> Outer$Inner.class
+Baraye dastresi hafeze faghat mitavan ba Outer dastresi dasht.
+
+.........................................
+
+7. Inner Class agar dakhele method bashad faghat dakhele haman method mishavad az an estefade kard.
+ Baraye estefade kardan faghat bayad darone haman method az on object sakht.
+
+...........................................
+
+!!! Mamolan Enum harra ----> Inner minevisand
+
+............................................

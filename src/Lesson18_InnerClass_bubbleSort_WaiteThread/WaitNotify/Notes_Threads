@@ -1,7 +1,0 @@
-
-1. List thread-safe nist ---> agar dar classi list ra tarif konim va bad roye an Thread ejra konim.
-on list beine tamame thread ha moshtarak mishavad.
-...............................
-2. yek collection be name ---> Vector ---> thread-safe ast. ke manande List ast
-agar chandta Thread biad in thread ha dar saf gharar migirand va be tartib vared mishavand.
-...............................

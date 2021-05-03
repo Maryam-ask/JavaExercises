@@ -1,0 +1,42 @@
+
+Method --> vabaste be yek Object ast. vali Function intor nist.
+List ---> be yek Stream tabdil mikone ---> dige for-ech nemikhad.
+
+Stream ----> Hamzaman ke download mikone -> namayesh ham midahad ( ham zaman).
+       ----> Yek list ra migirad va harche Data migirad  mitavanad hamzaman karhaye moshakhas ra roye an anjam dahad.
+       ----> Yek Class ast dar java
+       ----> mitavanim Lambda benevisim va kod khat haye kamtar benevisim.
+       ----> donbaleie az ashyaye yek manba
+       ----> List ra zakhire nemikonad ---> faghat haman lahze bahash kar mikonad
+
+************************************************************************
+Stream Methods:
+1. filter(Predicate)---> boolean test (T t)
+2. map(Function)---> R apply (T t)
+3. mapToInt(ToIntFunction)---> int applyAsInt(T value)
+4. mapToLong(ToLongFunction)---> long applyToLong(T value)
+5. mapToDouble(ToDoubleFunction)---> double applyToDouble(T value)
+6. sorted ---> It has 2 Overload ---> 1. sorted()  ---> 2.  sorted(Comparator)
+7. skip(long number)
+8. limit(long maxsize)
+
+
+
+************************************************************************
+Filter :
+
+Baraye filter kardan az Filter estefade mikonim:
+
+** code ** list.stream().filter(nushabe -> nushabe.getColor().equals("Black")).collect(Collectors.toList())
+
+Vorodie methode filter ---> ye Predicate (interface) ast ---> method --> boolean test (t) --> Lambda --> (T)-> return boolean
+                                                                 --> ye Object migirad va ye boolean bar migardanad
+                                                                 --> Baraye chek kardane shart estefade mishavad.
+
+************************************************************************
+Map :
+
+** code ** list.stream().map(n-> n.getWeight()+" "+n.getColor()).collect(Collectors.toList())
+
+Vorodie methode map ---> ye Function (Interface) ast --> method --> apply --> R apply (T t) --> Lambda --> (t)->r;
+                                                            --> Vorodi yek Object migirad va khoroji ye Object khoroji midahad.

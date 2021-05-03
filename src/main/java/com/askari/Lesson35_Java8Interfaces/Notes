@@ -1,0 +1,11 @@
+
+Streamha alave bar inke roye collectionha kar mikonand yek seri methodaye dge ham darand.
+
+Methodhaye digare Stream:
+1.generate ---> vorodie an yek Supplier ast
+2.forEach ----> vorodish yek consumer mibashad --> consumer yek interface ast ---> void accept(T t) ---> (T)->void
+3.replaceAll ---> vorodie an yek operator ast --> yek methode identity darat --> return t-> t; --> haman ke vorodi migirad ra khoroji midahad
+            ---> darvaghe haman methode apply Function ast ---> T apply(T t)
+
+Interfacehaye java8:
+1. BinaryOperator ---> Az BiFunction ra esrs mibarad

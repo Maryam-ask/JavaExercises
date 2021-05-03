@@ -1,0 +1,23 @@
+Ramznegari 2 no darim : 1. Ramznegarie Bargasht napazir 2. Ramznegarie Bangasht Pazir
+
+Bargasht Pazir : ---> RSA  &   AES     ( Eeme Algorithm)
+                ----> 1klide ( 1 klid Private)   &  2klide ( 1 klid Private & 1 klid Public)
+  -----> Dar in halat mitavanim dobarre be password beresim ya haman matni ke ramznegari kardim.
+
+
+Bargasht Napazir : ----> MD5   &    SHA     (Esme Algorithm)
+      ------> Dar in halat nemitavanim dobare be password beresim
+        ------> Algoritm ramz goshaie nadrad!
+
+*******************************************************************************************
+
+Hash kardan : Ye kod be an midahim va ba algorithm Hash an ra ramzgozari mikonad!!
+ !!! Vaghty vorodi yeksan ast ---> Bayad khoroji ham yeksan bashad.
+ !!! Hash hich do reshteie nemitavanad yeksan bashad.!!!
+ !!!! Az Hash nemitavan be Dataye avalie beresim!
+ !!!!! Algorithm Hash yek Algorithm ryazi ast.
+   !!--> Faghat az roye reshte mitavan Hash an ra bedast avard --> vali az Hash nemitavan Reshte ra bedast avard!!!!
+
+Hashe har algorithm ba algorithm digar fargh darad!!!!!!
+
+

@@ -1,0 +1,60 @@
+Annotation ----> Hashie nevisi (Mani)
+    ----> Alamateshan ----> Haman @ poshteshon ast.
+    ---> dar HTML ha estefade mishavand
+    ----> Be tanhaie kari ra anjam nemidahad.
+
+
+Ahdafe estefade az annotationha:
+Yekseri khata va ieradha ra be compiler bedim.
+Mogheye compile source code ra avaz konim
+Mogheye Run-Time source code ra avaz konim
+
+******************************************************
+
+Mazaya:
+1. Rajebe khataha va varning ha be compiler etela midahad.
+2. Mogheye compile sorce code ra avaz mikonad.
+***********************************************************
+
+Dar zamane runtime --> ye raftary ra avaz konad.
+**********************************************************'
+
+Jaye gharargereftan :
+Bala sare class ha - Balasare method ha - Balasare field ha - balasare interface ha - Balasare  package ha -
+Hameja mitavanim estefade konim
+**********************************************
+
+Daste-bandi ha:
+1. Java Built-in Annotation:
+    ---> Jozve hadafhaye aval hastand ---> khataha va hoshdar ha ra be compiler etela midahand
+  @Override     @FunctionalInterface    @SuppressWarning
+  @Deprecated   @SafeVarargs            @Native
+
+2. Meta Annotation:
+    ---> Zamani estefade mishavand ke khodemon bekhahim ye Annotation benevisim.
+    @Target
+    @Retention  ---> SOURCE --> Baraye hoshdar --> Na mogheye Run-time be dard mikhore na moghe compile
+                ---> CLASS --> Baraye compiler ghabele moshahedast
+                ---> RUNTIME --> Ham baraye runtime ham baraye compile ghabele moshahedast
+         !!! --> agar nagozarim be sorate pishfarz --> CLASS ra migozarad.
+    @Inherited  ----> Baraye ers bordeshodane annotation ha.
+        !!! --> Dar ersbary ha Annotation ers borde nemishavad.
+    @Dcumented  ---> usage an Annotation ra dar Java DOC neshondahad.
+    @Repeatable  ---> Ye jahaie majborimchandbar az ye Annotation bishtar az yekbar roye yek element estefade konim.
+
+*******************************************************'
+@SuppressWarning ---> khataheye compiler ra migirad --> ghesmathaie ke be range ghahveie darmiayand.
+@Deprecated ---> Khode JDK ro methode khat mikeshe ---> JDK dar versione jadid nemikhahad on Method ra erae bede.
+            ---> Karbordesh dar API ha ast --> baraye inke be sherkat haye dge befahmanim ke in service digar ghararnist edame peida konad
+@Native ---> To khode JDK estefade mishavad.
+        ---> Dare az code Native stefade mikonad --> Dataye avalye dar java.
+@SafeVarargs ---> baraye zamani ke ye method ba vorodie list ya array dashte bashim test(String ... s){ }
+
+**********************************************************'
+
+SAKHTE ANNOTATION
+
+public @interface MyAnnotation{  }
+
+Bayad chand chiz ra baraye an tarif konim:
+1. Gharare Balasare che chizi estefade shavad.

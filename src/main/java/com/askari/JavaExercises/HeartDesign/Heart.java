@@ -9,7 +9,7 @@ package com.askari.JavaExercises.HeartDesign;
 public class Heart {
     public static void main(String[] args) {
 
-        int size = 10;
+        int size = 8;
         int counter =0;
 
         for (int i = 0; i < size; i++) {
@@ -22,6 +22,7 @@ public class Heart {
                 if (d1 < size + 0.5 || d2 < size + 0.5) {
                    //System.out.printf("\uD83D\uDC8B"); // Kiss
                    System.out.printf("\uD83E\uDDE1"); // Heart
+
                     counter++;
                 }else
                     System.out.print("  ");
@@ -35,6 +36,7 @@ public class Heart {
             for (int z = 0; z < 4 * size + 1 - 3 * i; z++) {
                 //System.out.printf("\uD83D\uDC8B"); // Kiss
                 System.out.printf("\uD83E\uDDE1"); // Heart
+
                 counter++;
             }
             System.out.println();
